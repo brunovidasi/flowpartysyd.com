@@ -8,6 +8,10 @@ footer h2.fw { margin: 0 auto; font-size: clamp(56px, 12vw, 180px); }
 .foot-links a { text-decoration: none; transition: color .2s; }
 .foot-links a:hover { color: var(--ink); }
 .foot-stripes { height: 56px; background: var(--stripes); margin: 0 calc(-1 * var(--gutter)); }
+.foot-bottom { display: flex; justify-content: space-between; gap: 8px 24px; flex-wrap: wrap; padding: 22px 0; font-size: 13px; letter-spacing: .04em; color: var(--muted); }
+.foot-bottom a { color: var(--ink); text-decoration: none; transition: color .2s; }
+.foot-bottom a:hover { color: var(--t-purple); }
+.foot-bottom .heart { color: var(--red); }
 @media (max-width: 860px) {
   .signup { flex-direction: column; }
 }
