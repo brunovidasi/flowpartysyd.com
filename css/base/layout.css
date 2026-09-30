@@ -1,0 +1,7 @@
+/* ---------- SECTIONS ---------- */
+section { position: relative; z-index: 2; padding: clamp(80px, 11vw, 150px) var(--gutter); }
+.eyebrow { font-size: 12px; letter-spacing: .3em; text-transform: uppercase; color: var(--muted); margin-bottom: 22px; display: flex; align-items: center; gap: 12px; }
+.eyebrow::before { content: ""; width: 28px; height: 12px; background: var(--stripes); border-radius: 2px; flex: none; }
+h2.fw { font-size: clamp(64px, 11vw, 170px); display: block; width: max-content; max-width: 100%; }
+.lede { color: var(--muted); font-size: 18px; line-height: 1.55; max-width: 620px; margin-top: 22px; }
+.lede b { color: var(--ink); }

@@ -1,0 +1,35 @@
+/* ---------- ANIMATED LOGO ----------
+   The real logo image, cut into windows: F, L, O, W on the main row, plus the echo rows above and below.
+   Each window shows its part of the image; --dy slides the image inside its window. */
+@property --dy { syntax: "<number>"; inherits: true; initial-value: 0; }
+.logo-anim { --lh: min(46vh, 430px); position: relative; height: var(--lh); aspect-ratio: 642 / 900; will-change: opacity; }
+.logo-anim .slices { position: absolute; inset: 0; filter: drop-shadow(0 24px 40px rgba(0,0,0,.6)); }
+.slice { position: absolute; overflow: hidden; left: calc(var(--x0) * 100%); top: calc(var(--y0) * 100%); width: calc((var(--x1) - var(--x0)) * 100%); height: calc((var(--y1) - var(--y0)) * 100%); }
+.slice img { position: absolute; left: 0; top: 0; max-width: none; width: calc(100% / (var(--x1) - var(--x0))); transform: translate(calc(var(--x0) * -100%), calc((var(--dy) + var(--pulse, 0) - var(--y0)) * 100%));
+  /* each piece only ever shows its own band of the image, even while it slides */
+  -webkit-mask-image: linear-gradient(transparent calc(var(--y0) * 100%), #000 calc(var(--y0) * 100%) calc(var(--y1) * 100%), transparent calc(var(--y1) * 100%));
+  mask-image: linear-gradient(transparent calc(var(--y0) * 100%), #000 calc(var(--y0) * 100%) calc(var(--y1) * 100%), transparent calc(var(--y1) * 100%)); }
+.slice.rise { animation: rise .8s cubic-bezier(.2,.8,.2,1) var(--d) both; }
+.slice.drop { animation: drop .8s cubic-bezier(.2,.8,.2,1) var(--d) both; }
+@keyframes rise { from { --dy: calc(var(--y1) - var(--y0)); } to { --dy: 0; } }
+@keyframes drop { from { --dy: calc(var(--y0) - var(--y1)); } to { --dy: 0; } }
+/* once built, the top and bottom echoes breathe in and out of the main row */
+@property --pulse { syntax: "<number>"; inherits: true; initial-value: 0; }
+.slice[data-row="top"] { animation: rise .8s cubic-bezier(.2,.8,.2,1) var(--d) both, pulse-top 2.8s ease-in-out 3.4s infinite; }
+.slice[data-row="bot"] { animation: drop .8s cubic-bezier(.2,.8,.2,1) var(--d) both, pulse-bot 2.8s ease-in-out 3.4s infinite; }
+@keyframes pulse-top { 50% { --pulse: .08; } }
+@keyframes pulse-bot { 50% { --pulse: -.08; } }
+/* colour pours down the W, top echo → main → bottom echo */
+/* every piece runs the same sweep over the whole image; each only shows its own band, so together they read as one continuous pour */
+.slice .wht { filter: brightness(0) invert(1); animation: pour 1.1s cubic-bezier(.45,0,.55,1) 1.85s both; }
+@keyframes pour { from { clip-path: inset(0 0 0 0); } to { clip-path: inset(100% 0 0 0); } }
+/* easter egg: once the sparkles have popped in, each flag sweeps through the letters left to right, holds, then clears out to the right.
+   Every piece clips across the whole logo's width, so the edge crosses all the letters as one line. */
+.slice .flag { clip-path: inset(0 100% 0 0); animation: glimpse 2s cubic-bezier(.45,0,.55,1) var(--gd); }
+@keyframes glimpse { from { clip-path: inset(0 100% 0 0); } 30%, 65% { clip-path: inset(0 0 0 0); } to { clip-path: inset(0 0 0 100%); } }
+@media (max-width: 860px) {
+  .logo-anim { --lh: 34vh; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .slice .wht, .slice .flag { display: none; }
+}

@@ -1,0 +1,138 @@
+[
+  {
+    "name": "Flow Exclusive",
+    "date": "Apr 2021",
+    "people": "~100",
+    "logo": null,
+    "story": "The launch party, for friends only. Where it all started.",
+    "album": null
+  },
+  {
+    "name": "Flow Carnaval",
+    "date": "Dec 2021",
+    "people": "~300",
+    "logo": "carnaflow",
+    "story": "The end of lockdown, and our first night with live bands.",
+    "album": null
+  },
+  {
+    "name": "Flow Mardi Gras",
+    "date": "Mar 2022",
+    "people": "~400",
+    "logo": "flowmardigras",
+    "story": "Our biggest night at the time. We had to stop selling tickets at venue capacity.",
+    "album": null
+  },
+  {
+    "name": "Flow Glow",
+    "date": "May 2022",
+    "people": "~250",
+    "logo": "flowglowok",
+    "story": "A VIVID-season special: UV lights, neon face paint, lasers and projections.",
+    "album": "125645536870715"
+  },
+  {
+    "name": "Flow Pankadão",
+    "date": "Jul 2022",
+    "people": "~350",
+    "logo": "pankadao",
+    "story": "Favela-inspired baile funk. Our fastest sell-out.",
+    "album": "125661270202475"
+  },
+  {
+    "name": "Flow Wonderland",
+    "date": "Oct 2022",
+    "people": "~500",
+    "logo": "halloween",
+    "story": "Alice in Wonderland meets Halloween: two rooms and live shows.",
+    "album": "148099327958669"
+  },
+  {
+    "name": "Flow Carnaval",
+    "date": "Dec 2022",
+    "people": "~400",
+    "logo": "carnaflow",
+    "story": "A free day party to close a huge 2022.",
+    "album": null
+  },
+  {
+    "name": "Flow World Pride",
+    "date": "Mar 2023",
+    "people": "~400",
+    "logo": "mardigays",
+    "story": "World Pride at the Oxford Art Factory: 7.5 hours, live shows and five DJs.",
+    "album": "189385880496680"
+  },
+  {
+    "name": "Pankadão II",
+    "date": "Jul 2023",
+    "people": null,
+    "logo": "pankadao2",
+    "story": "By popular demand, one of our best-received parties came back bigger.",
+    "album": "267113909390543"
+  },
+  {
+    "name": "Flow Halloween",
+    "date": "Oct 2023",
+    "people": "456",
+    "logo": "halloween2023",
+    "story": "Halloween at Kinselas: 7.5 hours of partying, shows and five DJs.",
+    "album": null
+  },
+  {
+    "name": "metAMORphosis",
+    "date": "Feb 2024",
+    "people": "489",
+    "logo": "metamorphosis",
+    "story": "Mardi Gras at Arq Sydney, with circus artists and an after-party: almost 12 hours.",
+    "album": "385642154204384"
+  },
+  {
+    "name": "Funk Rave",
+    "date": "Jul 2024",
+    "people": "508",
+    "logo": "funkrave",
+    "story": "Baile funk all night, and more than 500 people through the door.",
+    "album": null
+  },
+  {
+    "name": "Flow Boat Party",
+    "date": "Dec 2024",
+    "people": "347",
+    "logo": "boatparty",
+    "story": "FLOW on the water.",
+    "album": "578434111591853"
+  },
+  {
+    "name": "Funk Rave II",
+    "date": "May 2025",
+    "people": "503",
+    "logo": "funkrave",
+    "story": "The Funk Rave returned, and over 500 of you came back for more.",
+    "album": null
+  },
+  {
+    "name": "Sunset Boat Party",
+    "date": "Nov 2025",
+    "people": "319",
+    "logo": "sunsetflow",
+    "story": "Back on the water, this time at sunset.",
+    "album": "832393302862598"
+  },
+  {
+    "name": "CarnaFunk",
+    "date": "May 2026",
+    "people": "549",
+    "logo": "carnafunk",
+    "story": "Our biggest night so far.",
+    "album": "981500154618578"
+  },
+  {
+    "name": "Queens of Brazil",
+    "date": "Sep 2026",
+    "people": null,
+    "logo": "queensofbrazil",
+    "story": "Drag Race Brasil winner Ruby Nox headlined at Oxford Art Factory, with Poseidon Drag and Paola Hoffmann Van Cartier.",
+    "album": "https://drive.google.com/drive/folders/1AlQN5wb7Zr14edv9Q8hr2D5-y7QTpCnV"
+  }
+]

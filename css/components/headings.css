@@ -1,0 +1,32 @@
+/* ---------- LOGO-STYLE HEADINGS ----------
+   Like the logo: above the word, a strip showing the top of its letters; below, a strip showing the bottom.
+   League Gothic caps sit between .127em and .87em of a 1em line. The last letter carries the W's stripes. */
+.fw { font-family: var(--display); font-weight: 400; text-transform: uppercase; line-height: 1; white-space: nowrap; letter-spacing: .01em; display: inline-block; }
+.fw .row { display: block; overflow: hidden; }
+.fw .main { height: .75em; }
+.fw .main > span { display: block; margin-top: -.125em; }
+.fw .ghost { height: .23em; }
+.fw .top { margin-bottom: .03em; }
+.fw .bot { margin-top: .03em; }
+.fw .ghost > span { display: block; transition: transform 1s cubic-bezier(.2,.8,.2,1); }
+.fw .top > span { margin-top: -.127em; transform: translateY(.3em); }
+.fw .bot > span { margin-top: -.64em; transform: translateY(-.3em); }
+.fw.in .ghost > span { transform: none; }
+/* once unfolded, the echoes breathe in and out like the FLOW logo: three breaths, each smaller, then they settle */
+.fw.in .top > span { --b: 1; animation: fw-breathe 7.5s ease-in-out 1s; }
+.fw.in .bot > span { --b: -1; animation: fw-breathe 7.5s ease-in-out 1s; }
+@keyframes fw-breathe {
+  0%, 33.3%, 66.7%, 100% { translate: 0 0; }
+  16.7% { translate: 0 calc(var(--b) * .09em); }
+  50% { translate: 0 calc(var(--b) * .06em); }
+  83.3% { translate: 0 calc(var(--b) * .03em); }
+}
+/* the echoes carry the W's top bands (purple, red) and bottom bands (blue, navy), as in the logo */
+.fw .top .w { background-image: linear-gradient(transparent 0 .127em, var(--purple) .127em .26em, var(--red) .26em .357em, transparent .357em); }
+.fw .bot .w { background-image: linear-gradient(transparent 0 .64em, var(--blue) .64em .81em, var(--navy) .81em .87em, transparent .87em); }
+
+/* section headings */
+h2.fw { font-size: clamp(64px, 11vw, 170px); display: block; width: max-content; max-width: 100%; }
+@media (max-width: 860px) {
+  h2.fw { font-size: clamp(56px, 17vw, 120px); }
+}

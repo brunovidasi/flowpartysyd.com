@@ -1,0 +1,35 @@
+/* ---------- TEAM: names on the photo; hover or tap a person to put the spotlight on them ---------- */
+@property --sx { syntax: "<percentage>"; inherits: true; initial-value: 50%; }
+.team { position: relative; margin-top: 56px; max-width: 900px; border-radius: 22px; overflow: hidden; --sx: 50%; transition: --sx .5s cubic-bezier(.2,.8,.2,1); }
+.team img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.team::after { content: ""; position: absolute; inset: 45% 0 0; background: linear-gradient(transparent, rgba(10,7,18,.9)); pointer-events: none; }
+.spot { position: absolute; inset: 0; background: rgba(10,7,18,.7); opacity: 0; transition: opacity .4s; pointer-events: none;
+  -webkit-mask-image: radial-gradient(ellipse 17% 60% at var(--sx) 45%, transparent 60%, #000 100%);
+  mask-image: radial-gradient(ellipse 17% 60% at var(--sx) 45%, transparent 60%, #000 100%); }
+.team.active .spot { opacity: 1; }
+.who { position: absolute; top: 0; bottom: 0; left: var(--l); width: var(--w); z-index: 2; padding: 0; border: 0; background: none; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+.who span { position: absolute; left: var(--tag); top: 64%; transform: translateX(-50%); font-family: var(--display); font-size: 26px; letter-spacing: .06em; text-transform: uppercase; padding: 6px 12px 4px; border-radius: 8px; background: rgba(10,7,18,.6); backdrop-filter: blur(6px); white-space: nowrap; transition: background .3s, color .3s, transform .3s; }
+.who[aria-pressed="true"] span { background: var(--yellow); color: var(--bg); transform: translateX(-50%) scale(1.12); }
+.team.active .who[aria-pressed="false"] span { opacity: .55; }
+.who:focus-visible { outline: none; }
+.who:focus-visible span { outline: 2px solid var(--yellow); outline-offset: 3px; }
+.team-info { position: absolute; left: 0; right: 0; bottom: 0; z-index: 1; padding: 24px 28px; pointer-events: none; }
+.team-info h3 { font-family: var(--display); font-weight: 400; font-size: clamp(36px, 5vw, 60px); line-height: 1; text-transform: uppercase; }
+.team-info p { color: rgba(255,255,255,.8); margin-top: 6px; }
+.team-info.swap { animation: swap .35s ease; }
+@keyframes swap { from { opacity: 0; transform: translateY(8px); } }
+@media (max-width: 860px) {
+  /* on phones the caption sits under the photo instead of on top of it */
+  .team { overflow: visible; border-radius: 0; }
+  .team img { border-radius: 16px; }
+  .team::after { display: none; }
+  .spot { border-radius: 16px; bottom: auto; aspect-ratio: 3 / 2; }
+  .who { bottom: auto; aspect-ratio: auto; height: calc((100vw - 2 * var(--gutter)) * 2 / 3); }
+  .who span { font-size: 15px; padding: 4px 8px 2px; top: auto; bottom: 10px; }
+  .team-info { position: static; padding: 16px 0 0; }
+  .team-info h3 { font-size: 34px; }
+  .team-info p { font-size: 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .team { transition: none; }
+}

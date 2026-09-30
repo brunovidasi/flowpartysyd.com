@@ -1,0 +1,19 @@
+/* single W colours, used for highlighted words */
+.c0 { color: var(--red); } .c1 { color: var(--orange); } .c2 { color: var(--yellow); }
+.c3 { color: var(--green); } .c4 { color: var(--t-blue); } .c5 { color: var(--t-purple); }
+
+/* the W's stripes inside one letter (League Gothic caps sit between .127em and .87em of a 1em line) */
+.w { display: inline-block; line-height: 1; color: transparent; -webkit-background-clip: text; background-clip: text; -webkit-text-stroke: 0;
+  background-image: linear-gradient(transparent 0 .127em, var(--red) .127em .221em, var(--orange) .221em .437em, var(--yellow) .437em .654em, var(--green) .654em .87em, transparent .87em); }
+
+/* sparkle (same shape everywhere, drawn as SVG so it looks identical on every device) */
+.star { display: inline-block; width: 1em; height: 1em; vertical-align: middle; overflow: visible; flex: none; }
+.star path { fill: currentColor; }
+.star.outline path { fill: none; stroke: currentColor; stroke-width: 1.4; }
+
+/* gentle reveal as elements scroll into view */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .9s, transform .9s; }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; }
+}

@@ -1,0 +1,7 @@
+/* ---------- PLACARDS: small drifting strips between sections ---------- */
+.placard-strip { overflow: hidden; padding: 10px 0; }
+.placard-row { overflow: hidden; }
+.placard-track { display: flex; gap: 18px; width: max-content; padding: 12px 9px; will-change: transform; }
+.placard { flex: none; width: clamp(96px, 9vw, 130px); padding: 0; border: 3px solid #fff; border-radius: 10px; background: #fff; cursor: zoom-in; rotate: var(--r); transition: rotate .3s, scale .3s; box-shadow: 0 16px 30px rgba(0,0,0,.45); }
+.placard:hover { rotate: 0deg; scale: 1.06; }
+.placard img { width: 100%; aspect-ratio: 5 / 6; object-fit: cover; border-radius: 4px; }

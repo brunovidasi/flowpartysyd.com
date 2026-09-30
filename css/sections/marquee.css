@@ -1,0 +1,5 @@
+/* ---------- MARQUEE ---------- */
+.marquee { border-block: 1px solid var(--line); overflow: hidden; padding: 16px 0 12px; background: var(--bg-2); }
+.marquee-track { display: flex; align-items: center; gap: 40px; width: max-content; font-family: var(--display); font-size: clamp(40px, 5.5vw, 76px); text-transform: uppercase; line-height: 1; will-change: transform; }
+.marquee-track .o { -webkit-text-stroke: 1.5px var(--ink); color: transparent; }
+.marquee-track .star { font-size: .5em; }

@@ -1,0 +1,22 @@
+/* palette sampled from the rainbow W of the FLOW logo */
+:root {
+  --bg: #0a0712;
+  --bg-2: #130e1f;
+  --ink: #f7f3ff;
+  --muted: #a79fb9;
+  --purple: #602a73;
+  --red: #ce2127;
+  --orange: #f06a22;
+  --yellow: #f0cc12;
+  --green: #7cbf42;
+  --blue: #2261a2;
+  --navy: #2e235f;
+  /* purple and blue lifted a little so they read as text on the dark background */
+  --t-purple: #a052c0;
+  --t-blue: #3a7bc8;
+  --line: rgba(255,255,255,.12);
+  --gutter: clamp(16px, 4vw, 48px);
+  --display: "League Gothic", "Arial Narrow", sans-serif;
+  --stripes: linear-gradient(var(--purple) 0 14.29%, var(--red) 0 28.57%, var(--orange) 0 42.86%, var(--yellow) 0 57.14%, var(--green) 0 71.43%, var(--blue) 0 85.71%, var(--navy) 0);
+  --stripes-x: linear-gradient(90deg, var(--purple) 0 14.29%, var(--red) 0 28.57%, var(--orange) 0 42.86%, var(--yellow) 0 57.14%, var(--green) 0 71.43%, var(--blue) 0 85.71%, var(--navy) 0);
+}

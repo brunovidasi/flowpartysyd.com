@@ -1,0 +1,19 @@
+/* ---------- LAST PARTY ---------- */
+/* last party and editions sit close together, as one story */
+#last-party { padding-bottom: clamp(28px, 4vw, 56px); }
+.photos { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 180px; grid-auto-flow: dense; gap: 10px; margin-top: 56px; }
+.photos button { border: 0; padding: 0; border-radius: 14px; overflow: hidden; cursor: zoom-in; background: var(--bg-2); }
+.photos button.big { grid-column: span 2; grid-row: span 2; }
+.photos button.tall { grid-row: span 2; }
+.photos img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s; }
+.photos button:hover img { transform: scale(1.04); }
+/* photos appear one by one as you scroll through the grid */
+.photos button { opacity: 0; transform: translateY(40px) scale(.94); transition: opacity .6s, transform .7s cubic-bezier(.2,.8,.2,1); }
+.photos button.on { opacity: 1; transform: none; }
+.photo-foot { display: flex; justify-content: flex-end; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 18px; }
+@media (max-width: 860px) {
+  .photos { grid-template-columns: 1fr 1fr; grid-auto-rows: 150px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .photos button { opacity: 1; transform: none; }
+}

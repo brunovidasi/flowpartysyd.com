@@ -1,0 +1,13 @@
+/* ---------- FOOTER ---------- */
+footer { position: relative; z-index: 2; padding: 100px var(--gutter) 0; border-top: 1px solid var(--line); text-align: center; overflow: hidden; }
+footer h2.fw { margin: 0 auto; font-size: clamp(56px, 12vw, 180px); }
+.motto { font-family: var(--display); font-size: clamp(26px, 3vw, 38px); text-transform: uppercase; letter-spacing: .04em; margin-top: 18px; }
+.signup { display: flex; gap: 10px; max-width: 520px; margin: 36px auto 0; }
+.signup input { flex: 1; min-width: 0; padding: 16px 20px; border-radius: 12px; border: 1px solid var(--line); background: rgba(255,255,255,.05); color: var(--ink); font: inherit; }
+.foot-links { display: flex; gap: 12px 36px; justify-content: center; margin: 56px 0 70px; font-family: var(--display); font-size: clamp(24px, 2.4vw, 30px); letter-spacing: .05em; text-transform: uppercase; line-height: 1.1; color: var(--muted); flex-wrap: wrap; }
+.foot-links a { text-decoration: none; transition: color .2s; }
+.foot-links a:hover { color: var(--ink); }
+.foot-stripes { height: 56px; background: var(--stripes); margin: 0 calc(-1 * var(--gutter)); }
+@media (max-width: 860px) {
+  .signup { flex-direction: column; }
+}

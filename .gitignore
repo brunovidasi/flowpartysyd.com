@@ -1,0 +1,19 @@
+# Local-only folders
+prototypes/
+legacy/
+
+# Throwaway screenshots
+/s-*.png
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Env / deps / logs
+.env
+.env.*
+node_modules/
+*.log
