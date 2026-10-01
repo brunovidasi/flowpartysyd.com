@@ -22,6 +22,12 @@ jobs:
           chmod 600 ~/.ssh/deploy_key
           echo "${{ secrets.SSH_KNOWN_HOSTS }}" > ~/.ssh/known_hosts
 
+      - name: Stamp asset versions
+        run: |
+          v="${GITHUB_SHA::8}"
+          sed -i "s#href=\"css/main.css\"#href=\"css/main.css?v=$v\"#; s#src=\"js/main.js\"#src=\"js/main.js?v=$v\"#" index.html
+          sed -i -E "s#@import url\(([^)]+\.css)\)#@import url(\1?v=$v)#" css/main.css
+
       - name: Upload site
         run: |
           rsync -avz \

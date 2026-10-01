@@ -1,0 +1,10 @@
+# Caching: code and data always revalidate (cheap 304 when unchanged),
+# so a deploy shows up on the next page load. Media can be cached longer.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|css|js|json|webmanifest)$">
+    Header set Cache-Control "no-cache"
+  </FilesMatch>
+  <FilesMatch "\.(webp|jpe?g|png|gif|svg|ico|woff2?)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+</IfModule>
