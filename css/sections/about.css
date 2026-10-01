@@ -12,11 +12,15 @@
 .safe b { color: var(--ink); }
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 22px; overflow: hidden; margin-top: 16px; }
 .stats div { background: var(--bg); padding: 30px 28px; }
-.stats strong { font-family: var(--display); font-weight: 400; font-size: clamp(70px, 8vw, 118px); line-height: 1; display: block; }
+.stats strong { font-family: var(--display); font-weight: 400; font-size: clamp(70px, 8vw, 118px); line-height: 1; display: block; white-space: nowrap; }
 .stats div > span { display: block; color: var(--muted); font-size: 14px; margin-top: 6px; }
 @media (max-width: 960px) {
   .pillars { grid-template-columns: 1fr; }
 }
 @media (max-width: 860px) {
   .stats { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 620px) {
+  .stats div { padding: 24px 20px; }
+  .stats strong { font-size: clamp(44px, 15vw, 70px); }
 }

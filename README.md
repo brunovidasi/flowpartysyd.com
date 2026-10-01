@@ -87,7 +87,7 @@ Everything that changes between parties is in `data/`:
   - `album`: a Facebook album id (the number after `set=a.` in the album link), a full link, or `null` for no photos button
 - **Last party photos** (`photos.json`): put web-sized images in `assets/img/queens-of-brazil/` and list them. `size` is `"big"` (2×2), `"tall"` (1×2) or `""` (1×1). Update the "Last party" section in `index.html`, including the album link.
 - **Placards** (`placards.json`): add web-sized images to `assets/img/banners-web/` and list them with alt text.
-- **Marquee words** (`marquee.json`): the words scrolling under the hero.
+- **Marquee words** (`marquee.json`): the words scrolling under the hero and above the footer.
 
 ## Notes
 

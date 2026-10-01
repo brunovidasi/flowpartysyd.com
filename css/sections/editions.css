@@ -21,3 +21,10 @@
 .ed-foot .album:hover { background: var(--ink); color: var(--bg); box-shadow: none; }
 .venues { margin-top: 18px; color: var(--muted); font-size: 14px; letter-spacing: .04em; }
 .venues b { color: var(--ink); font-weight: 500; }
+/* on mobile the arrows sit under the tiles, close to the thumb, instead of in the header */
+@media (max-width: 860px) {
+  #editions { display: flex; flex-direction: column; }
+  .ed-head { display: contents; }
+  #editions .arrows { order: 1; justify-content: center; margin-top: 4px; }
+  .venues { order: 2; }
+}
