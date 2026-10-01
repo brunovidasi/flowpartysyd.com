@@ -1,4 +1,4 @@
-/* next party card: shows the announced party with a countdown, or invites people to join the list */
+/* next party card: shows the announced party with a countdown, or invites people to join the WhatsApp group */
 import { $ } from "../lib/dom.js";
 import { lastStriped } from "../lib/markup.js";
 
