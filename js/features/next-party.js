@@ -4,7 +4,14 @@ import { lastStriped } from "../lib/markup.js";
 
 export function renderNextParty(party) {
   if (!party || new Date(party.date) <= Date.now()) return;
-  $("#nextTitle").innerHTML = lastStriped(party.name);
+  const title = $("#nextTitle");
+  title.innerHTML = lastStriped(party.name);
+  if (party.dateLabel) {
+    const date = document.createElement("span");
+    date.className = "next-date";
+    date.textContent = party.dateLabel;
+    title.append(date);
+  }
   $("#nextDetails").textContent = party.details;
   const btn = $("#nextBtn");
   btn.href = party.tickets; btn.textContent = "Get tickets →";

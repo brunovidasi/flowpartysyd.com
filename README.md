@@ -75,11 +75,13 @@ Everything that changes between parties is in `data/`:
   ```json
   {
     "name": "Flow Halloween",
+    "dateLabel": "Sat 31 Oct",
     "date": "2026-10-31T21:00:00+11:00",
     "details": "Sat 31 Oct · Kinselas, Darlinghurst · 9pm – late",
     "tickets": "https://linktr.ee/flowpartysyd"
   }
   ```
+  `dateLabel` is an optional, prominent date shown below the party name.
   `date` is the start time with the Sydney offset.
 - **Editions** (`editions.json`, oldest first): add an entry after each party.
   - `people`: exact door count where we have one, `~` for estimates, or `null`
